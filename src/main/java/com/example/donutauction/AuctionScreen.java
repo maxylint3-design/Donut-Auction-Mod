@@ -318,7 +318,6 @@ public class AuctionScreen extends Screen {
     @Override
     public boolean keyPressed(KeyEvent event) {
        if (event.key() == GLFW.GLFW_KEY_RIGHT_SHIFT) {
-           import org.lwjgl.glfw.GLFW;
             onClose();
             return true;
         }
