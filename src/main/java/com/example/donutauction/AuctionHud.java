@@ -21,12 +21,12 @@ public final class AuctionHud {
     private static final int BACKGROUND = 0xB0101014;
 
     public static void render(GuiGraphicsExtractor graphics) {
-        Auction a = AuctionManager.get();
-        Minecraft mc = Minecraft.getInstance();
-       if (a == null || mc.player == null) return;
-            mc.options.hideGui().get()) return;
+    Auction a = AuctionManager.get();
+    Minecraft mc = Minecraft.getInstance();
 
-        Font font = mc.font;
+    if (a == null || mc.player == null) return;
+
+    Font font = mc.font;
 
         String line1 = a.title();
         String line2 = (a.highestBidder == null)
