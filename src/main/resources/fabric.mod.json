@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "donutauction",
+  "version": "${version}",
+  "name": "Auction Mod",
+  "description": "Run auctions on Donut SMP. Pick an item, set a minimum bid and a duration, and the mod watches chat for payments and shows the highest bidder on screen.",
+  "authors": ["You"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.donutauction.AuctionMod"]
+  },
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
