@@ -23,7 +23,7 @@ public final class AuctionHud {
     public static void render(GuiGraphicsExtractor graphics) {
         Auction a = AuctionManager.get();
         Minecraft mc = Minecraft.getInstance();
-        if (a == null || mc.player == null || mc.options.hideGui) return;
+        if (a == null || mc.player == null) return;
 
         Font font = mc.font;
 
