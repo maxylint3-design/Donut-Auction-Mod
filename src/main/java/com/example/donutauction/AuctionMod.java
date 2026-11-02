@@ -37,7 +37,7 @@ public class AuctionMod implements ClientModInitializer {
         // 2) Runs 20 times per second
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (openKey.consumeClick()) {
-                if (client.player != null && client.getScreen() == null) {
+                if (client.player != null && client.screen == null) {
                     client.gui.setScreen(new AuctionScreen());
                 }
             }
