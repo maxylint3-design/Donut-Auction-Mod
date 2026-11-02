@@ -3,6 +3,7 @@ package com.example.donutauction;
 import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import net.fabricmc.api.ClientModInitializer;
+import org.lwjgl.glfw.GLFW;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommands;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -30,9 +31,7 @@ public class AuctionMod implements ClientModInitializer {
                 Identifier.fromNamespaceAndPath(MOD_ID, "auction"));
         openKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.donutauction.open",
-                InputConstants.Type.KEYSYM,
-                GLFW.GLFW_KEY_RIGHT_SHIFT,
-            import org.lwjgl.glfw.GLFW;
+            GLFW.GLFW_KEY_RIGHT_SHIFT,
                 category));
 
         // 2) Runs 20 times per second
