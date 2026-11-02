@@ -316,7 +316,7 @@ public class AuctionScreen extends Screen {
 
     @Override
     public boolean keyPressed(KeyEvent event) {
-        if (event.key() == InputConstants.KEY_RIGHT_SHIFT) {
+        if (event.key() == InputConstants.KEY_RSHIFT) {
             onClose();
             return true;
         }
