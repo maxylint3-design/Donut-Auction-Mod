@@ -31,13 +31,13 @@ public class AuctionMod implements ClientModInitializer {
         openKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.donutauction.open",
                 InputConstants.Type.KEYSYM,
-                InputConstants.KEY_RIGHT_SHIFT,
+                InputConstants.KEY_RSHIFT,
                 category));
 
         // 2) Runs 20 times per second
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (openKey.consumeClick()) {
-                if (client.player != null && client.screen == null) {
+                if (client.player != null && client.gui.screen() == null) {
                     client.gui.setScreen(new AuctionScreen());
                 }
             }
